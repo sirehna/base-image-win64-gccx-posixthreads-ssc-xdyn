@@ -4,7 +4,9 @@ RUN mkdir -p /opt
 WORKDIR /opt
 
 RUN cd /opt && \
-    wget https://github.com/sirehna/ssc/releases/download/v8.0.3/ssc_binary_windows_64_posixthreads.zip -O ssc.zip && \
+    wget https://gitlab.com/sirehna_naval_group/ssc/ssc/-/jobs/artifacts/v9.0.1/download?job=Windows+64+bits+with+GCC+POSIX+threads -O artifacts.zip && \
+    unzip artifacts.zip && \
+    rm artifacts.zip && \
     mkdir ssc && \
     cd ssc && \
     unzip ../ssc.zip && \
